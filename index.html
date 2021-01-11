@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="description" content="Jayanth's Portfolio">
+    <meta name="keywords"
+        content="Jayanth Jayadevan, Resume, Portfolio, jayanth.j737@gmail.com, jayanthjayadevan98@gmail.com, Linkedin Jayanth, Jayanth Machine Learing, NIT Calicut, NITC, Engineer, Flutter, Web dev">
+    <meta name="author" content="Jayanth Jayadevan" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayanth's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <link rel="icon" href="JJ.png" type="image/gif" sizes="16x16">
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <h2><a class="logo hvr-ripple-out" href="index.html">JJ</a></h2>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="bg.mp4" muted loop autoplay playsinline></video>
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Hey There<span id="cursor">!</span></h2>
+            <h3>I'm Jayanth Jayadevan</h3>
+            <br>
+            <h4><span class="hvr-bounce-to-right">Looking for Professional Details? Head on to </span> <a
+                    href="https://www.linkedin.com/in/jayanthjj/"><img id="big" src="biglinkedin.png" height='42px'></a>
+            </h4>
+            <h4><span class="hvr-bounce-to-right">Recruiter? Have a look at my </span> <a
+                    href="http://bit.ly/jayanthresume"><img id="big" src="resume2.png" height='45px'></a>
+            </h4>
+            <h4><span class="hvr-bounce-to-right">Projects and Tech Stacks </span> <a
+                    href="https://github.com/jayanthj737/"><img id="big" src="biggithub.png" height='42px'></a></h4>
+        </div>
+        <ul class="social">
+            <li><a href="https://www.linkedin.com/in/jayanthjj/"><img id="lin" src="lin.png" alt="" width='41px'
+                        height='33px'></a></li>
+            <li><a href="https://github.com/jayanthj737/"><img src="git.png" alt="" width='41px' height='33px'></a>
+            </li>
+            <li><a href="+91-9961133071"><img id="pho" src="phone.png" alt="" width='41px' height='33px'></a>
+            </li>
+            <li><a href="mailto:jayanthjayadevan98@gmail.com"><img src="email.png" alt="" width='43px'
+                        height='43px'></a>
+            </li>
+            <li><a href="https://twitter.com/jayanthjj7 "><img src="twitter.png" alt="" width='45px' height='50px'></a>
+            </li>
+
+        </ul>
+    </section>
+    <div class="menu">
+
+        <ul>
+            <li id="JJ" class="hvr-hang">Jayanth Jayadevan</li>
+            <li><img class="me" src="jayanth.jpg"></li>
+            <li><a class="hvr-hang" href="#">B.Tech National Institute of Technology Calicut</a></li>
+            <!-- <li><a class="hvr-hang" href="#">Currently Working in </a></li> -->
+            <li><a class="hvr-hang" href="#">Interests - Software Dev| ML/Dl | CyberSecurity</a></li>
+            <li><a class="hvr-hang" href="mailto:jayanthjayadevan98@gmail.com">Mail me at
+                    jayanthjayadevan98@gmail.com</a></li>
+            <!-- <li><a href="#">.</a></li> -->
+
+            <ul class="stuff">
+                <li><a href="https://www.linkedin.com/in/jayanthjj/"><img id="lin" src="blinkedin.png" alt=""
+                            width='35px' height='30px'></a></li>
+                <li><a href="https://github.com/jayanthj737/"><img src="bgit.png" alt="" width='35px' height='28px'></a>
+                </li>
+                <li><a href="+91-9961133071"><img src="phone.png" alt="" width='35px' height='28px'></a>
+                </li>
+                <li><a href="mailto:jayanthjayadevan98@gmail.com"><img src="bgmail.png" alt="" width='35px'
+                            height='28px'></a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showCase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showCase.classList.toggle('active')
+        })
+
+    </script>
+</body>
+
+</html>
