@@ -387,20 +387,23 @@
       .showcase, .showcase header{
           padding: 30px;
       }
+      .credits{
+        font-size: 0.3em;
+      }
       .showcase.active{
-        right: 100%;
+        right: 80%;
     }
     .hvr-hang {
-      font-size: 0.8em;
+      font-size: 0.7em;
     }
       .menu{
           padding-left: 30px;
-          font-size: 0.9em;
-          width: 100%;
+          font-size: 0.7em;
+          width: 80%;
       }
 
       .JJ{
-          font-size: 3em;
+          font-size: 2em;
       }
       .text h2{
           font-size: 3em;
@@ -412,9 +415,7 @@
     .text h4{
         font-size: 0.8em;
     }
-    .credits{
-      font-size: 0.5em;
-    }
+ 
 
     #big{
         height:25px;
@@ -471,6 +472,6 @@
   }
   
 .credits{
-  font-size: 20px;
+  font-size: 15px;
   padding: 10px 10px 10px 10px;
 }
