@@ -385,30 +385,35 @@
 
   @media(max-width: 798px){
       .showcase, .showcase header{
-          padding: 40px;
+          padding: 30px;
       }
       .showcase.active{
-        right: 70%;
+        right: 100%;
     }
-
+    .hvr-hang {
+      font-size: 0.8em;
+    }
       .menu{
-          padding-left: 40px;
-          font-size: 0.7em;
-          width: 70%;
+          padding-left: 30px;
+          font-size: 0.9em;
+          width: 100%;
       }
 
       .JJ{
-          font-size: 1.2em;
+          font-size: 3em;
       }
       .text h2{
           font-size: 3em;
       }
       .text h3{
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .text h4{
-        font-size: 1em;
+        font-size: 0.8em;
+    }
+    .credits{
+      font-size: 0.5em;
     }
 
     #big{
