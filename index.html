@@ -23,7 +23,14 @@
             <div class="toggle"></div>
         </header>
 
-        <video src="assets/bg.mp4" muted loop autoplay playsinline></video>
+        <video autoplay loop muted playsinline>
+            <source src="assets/bg.mp4" type="video/mp4">
+            <img src="assets/bg.gif">
+            <source src="assets/bg.webp" type="video/webp">
+            <source src="assets/bg.3gp" type="video/3gp">
+
+        </video>
+
         <div class="overlay"></div>
 
         <div class="text">
