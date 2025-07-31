@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run zoom detection on load and resize
     detectZoom();
     window.addEventListener('resize', detectZoom);
-
     // Ensure Microsoft logo is properly sized in relation to company logos on mobile
     function adjustMicrosoftLogoSize() {
         const microsoftLogo = document.querySelector('.microsoft-logo-large');
