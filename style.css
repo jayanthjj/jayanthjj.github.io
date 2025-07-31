@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 /* Global Styles */
 * {
@@ -1841,4 +1842,320 @@ a:hover {
 .credits:hover {
   color: #fff;
   text-decoration: none;
+}
+
+/* AI Projects Section */
+.ai-projects {
+  background: #0a0a14;
+  padding: 40px 0; /* Reduced from 80px to 40px */
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #87CEFA);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(52, 152, 219, 0.5);
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.project-content h3::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #87CEFA);
+  bottom: -5px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.project-content p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: rgba(52, 152, 219, 0.2);
+  color: #87CEFA;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.tag:hover {
+  background: rgba(52, 152, 219, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Skills Section */
+.skills-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+}
+
+.skills-group h3 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: rgba(52, 152, 219, 0.15);
+  color: #87CEFA;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.skill-tag:hover {
+  background: rgba(52, 152, 219, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Interactive Demo Section */
+.interactive-demo {
+  margin-top: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+}
+
+.interactive-demo h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.demo-description {
+  text-align: center;
+}
+
+.demo-description p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+.demo-button {
+  background: linear-gradient(90deg, #3498db, #5DADE2);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.demo-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+}
+
+.demo-interface {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 400px;
+  background: rgba(10, 10, 20, 0.7);
+  border: 1px solid rgba(52, 152, 219, 0.3);
+  display: none;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message {
+  margin-bottom: 15px;
+  max-width: 80%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.user-message {
+  background: rgba(52, 152, 219, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.ai-message {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-input {
+  display: flex;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.chat-input input:focus {
+  border-color: rgba(52, 152, 219, 0.6);
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 0 20px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(90deg, #3498db, #5DADE2);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: linear-gradient(90deg, #2980b9, #3498db);
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .interactive-demo {
+    padding: 20px;
+  }
+  
+  .demo-interface {
+    height: 350px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .demo-container {
+    flex-direction: row;
+  }
+  
+  .demo-description {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .demo-interface {
+    flex: 1.5;
+    display: block;
+  }
 }

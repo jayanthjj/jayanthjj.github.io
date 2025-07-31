@@ -1,0 +1,62 @@
+/* Microsoft Logo enhancement for mobile - Added July 31, 2025 */
+
+/* This file contains styles specifically to enhance the Microsoft logo visibility on mobile devices */
+
+/* Higher specificity selector to ensure these styles take precedence - MOBILE ONLY */
+@media (max-width: 768px) {
+    .role-container img.microsoft-logo-large {
+        height: 45px !important;
+        min-width: 110px !important;
+        filter: none !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 5px auto !important;
+        visibility: visible !important;
+        z-index: 15 !important; /* Higher than other logos */
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .role-container img.microsoft-logo-large {
+        height: 40px !important;
+        min-width: 100px !important;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 360px) {
+    .role-container img.microsoft-logo-large {
+        height: 36px !important;
+        min-width: 90px !important;
+    }
+}
+
+/* Landscape orientation */
+@media (max-width: 850px) and (orientation: landscape) {
+    .role-container img.microsoft-logo-large {
+        height: 35px !important;
+        min-width: 90px !important;
+        margin: 3px auto !important;
+    }
+}
+
+/* Ensure logo is properly sized in relation to company logos */
+@media (max-width: 768px) {
+    /* Set the baseline ratio between Microsoft logo and company logos */
+    .role-container img.microsoft-logo-large {
+        height: 45px !important;
+    }
+    
+    /* Make Microsoft logo proportional to Amazon logo */
+    img[src*="Amazon"] ~ .role-container img.microsoft-logo-large,
+    .amazon-logo ~ .role-container img.microsoft-logo-large {
+        height: calc(28px * 1.6) !important; /* Amazon height (28px) * scaling factor */
+    }
+    
+    /* Make Microsoft logo proportional to Wells Fargo logo */
+    img[src*="WellsFargo"] ~ .role-container img.microsoft-logo-large,
+    .wells-fargo-logo ~ .role-container img.microsoft-logo-large {
+        height: calc(18px * 2.5) !important; /* Wells Fargo height (18px) * scaling factor */
+    }
+}

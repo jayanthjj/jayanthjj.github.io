@@ -1,0 +1,8 @@
+/* Center content better */
+.text {
+    padding-top: 6vh !important;
+}
+
+.hero-container {
+    margin-top: -2vh !important;
+}
