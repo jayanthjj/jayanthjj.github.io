@@ -1,0 +1,88 @@
+/* Scrolling Fixes - Added to ensure proper scrolling when zoomed in */
+
+/* Ensure scrolling is enabled when zoomed in */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure the body allows proper scrolling */
+body {
+    overflow-y: auto !important; /* Force vertical scrolling */
+    position: relative;
+    min-height: 100%;
+}
+
+/* Fix the showcase section to allow proper scrolling */
+.showcase {
+    min-height: 100vh;
+    height: auto !important; /* Auto height instead of fixed */
+    position: relative;
+    overflow: visible !important; /* Make sure content doesn't get clipped */
+}
+
+/* Ensure text container doesn't hide content */
+.text {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: auto !important; /* Auto height to fit content */
+    overflow: visible !important;
+}
+
+/* Make sure hero container expands as needed */
+.hero-container {
+    overflow: visible;
+    height: auto;
+    min-height: fit-content;
+}
+
+/* Ensure skills section scrolls properly */
+.skills-container {
+    overflow: visible;
+}
+
+/* Fix footer to stay at the bottom but not overlap content */
+.footer-container {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+}
+
+/* Make sure the overlay doesn't interfere with scrolling */
+.overlay {
+    pointer-events: none;
+}
+
+/* Ensure video background stays fixed and doesn't interfere with scrolling */
+video.flipped-video {
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Fix for zoomed in view specifically */
+@media (min-width: 769px) {
+    body.zoomed {
+        height: auto;
+        min-height: 100%;
+    }
+    
+    .showcase {
+        height: auto !important;
+        min-height: 100vh;
+    }
+}
+
+/* Adjust for very tall content on small screens */
+@media (max-width: 768px) {
+    .showcase {
+        padding-bottom: 4rem !important; /* Extra padding to ensure all content is visible */
+    }
+    
+    .skills-container {
+        margin-bottom: 2rem !important;
+    }
+}

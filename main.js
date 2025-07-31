@@ -24,6 +24,18 @@ window.addEventListener('load', function() {
     const statusTexts = ["Loading...", "Almost there..."];
     let statusIndex = 0;
     
+    // Set CSS variable for viewport height (helps with mobile browsers)
+    function setViewportHeight() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    // Run once at start
+    setViewportHeight();
+    
+    // Update on resize
+    window.addEventListener('resize', setViewportHeight);
+    
     if (preloader) {
         // Update status text at intervals
         const statusInterval = setInterval(() => {
@@ -77,6 +89,22 @@ function createParticles() {
 
 // Combine DOMContentLoaded events for better performance
 document.addEventListener('DOMContentLoaded', function() {
+    // Detect zoom level and apply appropriate class
+    function detectZoom() {
+        // Different ways to detect zoom
+        const zoom = Math.round((window.outerWidth / window.innerWidth) * 100) / 100;
+        
+        // If zoomed in, add a class to body
+        if (zoom > 1.1) {
+            document.body.classList.add('zoomed');
+        } else {
+            document.body.classList.remove('zoomed');
+        }
+    }
+    
+    // Run zoom detection on load and resize
+    detectZoom();
+    window.addEventListener('resize', detectZoom);
     // Ensure Microsoft logo is properly sized in relation to company logos on mobile
     function adjustMicrosoftLogoSize() {
         const microsoftLogo = document.querySelector('.microsoft-logo-large');
