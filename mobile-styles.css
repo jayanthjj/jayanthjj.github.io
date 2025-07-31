@@ -1,0 +1,338 @@
+/* Mobile Responsive Styles - July 31, 2025 */
+
+:root {
+    --vh: 1vh;
+}
+
+/* Common mobile adjustments across all screen sizes */
+@media (max-width: 768px) {
+    /* Overall spacing adjustments */
+    .showcase {
+        padding: 1rem !important;
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+
+    /* Fix hero container spacing */
+    .hero-container {
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Adjust text sizing and alignment */
+    .intro {
+        padding: 1rem !important;
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    .intro h1 {
+        font-size: 2.4rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    .intro h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+
+    /* Role title and Microsoft logo adjustments */
+    .role-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .role-title {
+        font-size: 1.6rem !important;
+        text-align: center !important;
+    }
+
+    .microsoft-logo-large {
+        height: 45px !important; /* Increased to make comparable to company logos */
+        min-width: 110px !important; /* Set a minimum width like company logos have */
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+        filter: none !important; /* Ensure the logo displays with its original colors */
+        object-fit: contain !important; /* Maintain aspect ratio */
+    }
+
+    /* Previous companies adjustments */
+    .previous-companies {
+        margin: 12px 0 8px !important;
+        padding: 6px !important;
+        width: 90% !important;
+    }
+
+    .previous-companies span {
+        font-size: 0.8rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    .company-logos {
+        gap: 20px !important;
+        padding: 3px 15px !important;
+    }
+
+    /* Company logo sizing */
+    .company-logo {
+        height: 24px !important;
+        margin: 0 5px !important;
+    }
+
+    img[src*="Amazon"] {
+        height: 22px !important;
+        min-width: 65px !important;
+    }
+
+    img[src*="WellsFargo"], .wells-fargo-logo {
+        height: 16px !important;
+        min-width: 70px !important;
+    }
+
+    /* Bio text adjustments */
+    .bio {
+        font-size: 0.95rem !important;
+        margin: 5px 0 !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Skills section adjustments */
+    .skills-container {
+        margin-top: 8px !important;
+        gap: 8px !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .skills-group {
+        width: 100% !important;
+    }
+
+    .skills-group h3 {
+        font-size: 0.85rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    .skill-tags {
+        gap: 4px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .skill-tag {
+        padding: 2px 6px !important;
+        font-size: 0.6rem !important;
+        margin-bottom: 3px !important;
+    }
+
+    /* Fix footer position */
+    .footer-container {
+        padding: 3px 0 !important;
+    }
+
+    /* Optimize video background */
+    video.flipped-video {
+        position: fixed !important;
+        height: 100% !important;
+        width: auto !important;
+        min-width: 100% !important;
+        object-fit: cover !important;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    /* Further reduce font sizes */
+    .intro h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .intro h2 {
+        font-size: 1.6rem !important;
+    }
+
+    .role-title {
+        font-size: 1.4rem !important;
+    }
+
+    .microsoft-logo-large {
+        height: 40px !important; /* Prominent size for small screens */
+        min-width: 100px !important;
+    }
+
+    /* Adjust company logos for very small screens */
+    .company-logos {
+        gap: 15px !important;
+    }
+
+    img[src*="Amazon"] {
+        height: 20px !important;
+        min-width: 55px !important;
+    }
+
+    img[src*="WellsFargo"], .wells-fargo-logo {
+        height: 14px !important;
+        min-width: 60px !important;
+    }
+
+    /* Bio text further reduction */
+    .bio {
+        font-size: 0.9rem !important;
+    }
+
+    /* Even smaller skill tags */
+    .skill-tag {
+        padding: 2px 5px !important;
+        font-size: 0.55rem !important;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 360px) {
+    /* Minimal font sizes */
+    .intro h1 {
+        font-size: 2rem !important;
+    }
+
+    .intro h2 {
+        font-size: 1.4rem !important;
+    }
+
+    .role-title {
+        font-size: 1.3rem !important;
+    }
+
+    /* Stack company logos for tiny screens */
+    .company-logos {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    /* Further reduce bio text */
+    .bio {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Portrait orientation specific adjustments */
+@media (max-width: 768px) and (orientation: portrait) {
+    /* Additional portrait-specific adjustments */
+    .showcase {
+        padding-top: 3rem !important; /* Add more top padding in portrait mode */
+    }
+}
+
+/* Landscape orientation specific adjustments */
+@media (max-width: 850px) and (orientation: landscape) {
+    /* Optimize for landscape phone view */
+    .hero-container {
+        margin-top: 0 !important;
+    }
+
+    .intro {
+        padding: 0.5rem !important;
+    }
+
+    .intro h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .intro h2 {
+        font-size: 1.4rem !important;
+    }
+
+    .role-title {
+        font-size: 1.3rem !important;
+    }
+
+    .microsoft-logo-large {
+        height: 35px !important; /* Increased for better visibility in landscape */
+        min-width: 90px !important;
+        margin-top: 3px !important;
+        margin-bottom: 3px !important;
+    }
+
+    .bio {
+        font-size: 0.8rem !important;
+        margin: 3px 0 !important;
+    }
+
+    /* Compress vertical spacing in landscape */
+    .previous-companies {
+        margin: 5px 0 !important;
+        padding: 3px !important;
+    }
+
+    /* Make skills container horizontal in landscape */
+    .skills-container {
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    .skills-group {
+        width: auto !important;
+        min-width: 45% !important;
+    }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Adjust sizes for tablets */
+    .showcase {
+        padding: 1.5rem 2rem !important;
+    }
+
+    .hero-container {
+        margin-top: 2vh !important;
+    }
+
+    .intro {
+        max-width: 650px !important;
+    }
+
+    .intro h1 {
+        font-size: 2.6rem !important;
+    }
+
+    .intro h2 {
+        font-size: 2.1rem !important;
+    }
+
+    .role-title {
+        font-size: 1.8rem !important;
+    }
+
+    /* Company logos for tablets */
+    .previous-companies {
+        width: 80% !important;
+    }
+}
+
+/* Fix for iOS Safari viewport height issue */
+@supports (-webkit-touch-callout: none) {
+    .showcase {
+        min-height: -webkit-fill-available !important;
+        height: -webkit-fill-available !important;
+        min-height: calc(var(--vh, 1vh) * 100) !important;
+        height: calc(var(--vh, 1vh) * 100) !important;
+    }
+
+    .hero-container {
+        margin-top: 0 !important;
+    }
+}
+
+/* Handle notched phones like iPhone X and newer */
+@supports (padding: max(0px)) {
+    .showcase {
+        padding-left: max(1rem, env(safe-area-inset-left)) !important;
+        padding-right: max(1rem, env(safe-area-inset-right)) !important;
+        padding-bottom: max(1rem, env(safe-area-inset-bottom)) !important;
+    }
+
+    .footer-container {
+        padding-bottom: max(5px, env(safe-area-inset-bottom)) !important;
+    }
+}

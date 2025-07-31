@@ -21,7 +21,7 @@ setInterval(animateCursor, speed);
 window.addEventListener('load', function() {
     const preloader = document.querySelector('.preloader');
     const loaderStatus = document.querySelector('.loader-status');
-    const statusTexts = ["Loading amazing stuff...", "Almost there..."];
+    const statusTexts = ["Loading...", "Almost there..."];
     let statusIndex = 0;
     
     if (preloader) {
@@ -77,6 +77,31 @@ function createParticles() {
 
 // Combine DOMContentLoaded events for better performance
 document.addEventListener('DOMContentLoaded', function() {
+    // Ensure Microsoft logo is properly sized in relation to company logos on mobile
+    function adjustMicrosoftLogoSize() {
+        const microsoftLogo = document.querySelector('.microsoft-logo-large');
+        const amazonLogo = document.querySelector('img[src*="Amazon"]');
+        const wellsFargoLogo = document.querySelector('img[src*="WellsFargo"]');
+        
+        if (microsoftLogo && (amazonLogo || wellsFargoLogo) && window.innerWidth <= 768) {
+            // Get the larger company logo height
+            const amazonHeight = amazonLogo ? amazonLogo.offsetHeight : 0;
+            const wellsFargoHeight = wellsFargoLogo ? wellsFargoLogo.offsetHeight : 0;
+            const largerLogoHeight = Math.max(amazonHeight, wellsFargoHeight);
+            
+            // Set Microsoft logo height to be proportionally larger
+            if (largerLogoHeight > 0) {
+                const scaleFactor = 1.6; // Make Microsoft logo 60% larger than company logos
+                microsoftLogo.style.height = `${largerLogoHeight * scaleFactor}px`;
+                microsoftLogo.style.minWidth = `${largerLogoHeight * 3}px`;
+            }
+        }
+    }
+    
+    // Run on load and resize
+    adjustMicrosoftLogoSize();
+    window.addEventListener('resize', adjustMicrosoftLogoSize);
+
     // Add smooth hover effects for expertise tags
     const tags = document.querySelectorAll('.tag, .skill-tag');
     tags.forEach(tag => {
