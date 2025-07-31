@@ -6,44 +6,54 @@ html, body {
     padding: 0 !important;
     overflow-x: hidden !important;
     background-color: #111 !important;
+    height: 100vh !important; /* Force full height */
+    min-height: 700px !important; /* Minimum height to fit content */
+}
+
+/* Adjust video position */
+.showcase video {
+    position: absolute !important;
+    top: 0 !important; /* Normal position */
+    height: 100vh !important; /* Full viewport height */
 }
 
 /* Hero Container positioning */
 .hero-container {
-    margin-top: 5vh !important; /* Reduced from 10vh to bring everything up */
+    margin-top: 0 !important; /* No top margin to avoid scrolling */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center !important; /* Center vertically */
     align-items: center;
     height: 100% !important;
+    padding-bottom: 5vh !important; /* Push content down a bit */
 }
 
 /* Adjust intro section padding */
 .intro {
-    padding: 1.5rem !important;
-    margin-bottom: 1.5rem !important;
+    padding: 0.5rem !important;
+    margin-bottom: 0 !important;
     max-width: 700px !important;
 }
 
-/* Make skill tags more compact */
+/* Make skills use space better */
 .skills-container {
-    margin-top: 10px !important;
-    gap: 10px !important;
+    margin-top: 10px !important; /* Reduced vertical spacing */
+    gap: 10px !important; /* Reduced gap between skill groups */
 }
 
 .skills-group h3 {
-    margin-bottom: 6px !important;
-    font-size: 0.9rem !important;
+    margin-bottom: 7px !important; /* Reduced space after heading */
+    font-size: 0.95rem !important; /* Slightly smaller heading */
 }
 
 .skill-tags {
-    gap: 5px !important;
+    gap: 6px !important; /* Reduced gap between tags */
 }
 
 .skill-tag {
-    padding: 3px 8px !important;
-    font-size: 0.65rem !important;
-    margin-bottom: 4px !important;
+    padding: 3px 8px !important; /* Slightly smaller bubbles */
+    font-size: 0.72rem !important; /* Slightly smaller text */
+    margin-bottom: 4px !important; /* Reduced space between rows */
 }
 
 /* Adjust the CTA links to be more visible */
@@ -57,18 +67,31 @@ html, body {
     height: 100vh !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
+    justify-content: flex-start !important; /* Start from top */
     align-items: center !important;
-    padding: 2rem 6rem !important; /* Reduced top/bottom padding */
+    padding: 0 4rem !important; /* No top/bottom padding */
     margin-bottom: 0 !important; /* Ensure no margin at bottom */
+    overflow: hidden !important; /* Prevent scrollbars */
 }
 
 /* Adjust vertical spacing in text container */
 .text {
     display: flex !important;
-    justify-content: center !important;
+    justify-content: center !important; /* Center content vertically */
     align-items: center !important;
     height: 100% !important;
+    margin-top: 5vh !important; /* Push down from top */
+    padding-bottom: 0 !important;
+}
+
+/* Add specific styling for intro headings */
+.intro h1 {
+    margin-bottom: 0.3rem !important;
+    padding-top: 0 !important;
+}
+
+.intro h2 {
+    margin-bottom: 0.4rem !important;
 }
 
 /* Responsive adjustments */
@@ -78,13 +101,11 @@ html, body {
     }
     
     .intro h1 {
-        font-size: 2.8rem !important;
         margin-bottom: 0.3rem !important;
     }
     
     .intro h2 {
-        font-size: 2.3rem !important;
-        margin-bottom: 0.5rem !important;
+        margin-bottom: 0.4rem !important;
     }
     
     .role-container {
@@ -101,7 +122,6 @@ html, body {
     
     .previous-companies span {
         font-size: 0.75rem !important;
-        margin-bottom: 3px !important;
     }
     
     .company-logo {
@@ -111,7 +131,6 @@ html, body {
     .bio {
         margin-top: 0.3rem !important;
         margin-bottom: 0.3rem !important;
-        font-size: 0.9rem !important;
     }
     
     .microsoft-logo-large {
@@ -125,9 +144,10 @@ html, body {
     bottom: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    padding: 5px 0 !important; /* Reduced padding */
-    background-color: rgba(17, 17, 17, 1) !important; /* Make background fully opaque */
+    padding: 2px 0 !important; /* Further reduced padding */
+    background-color: rgba(17, 17, 17, 0.8) !important; /* Semi-transparent background */
     margin: 0 !important; /* Remove any margin */
+    height: 20px !important; /* Fixed height */
 }
 
 /* Adjust the project section */
@@ -151,17 +171,17 @@ section {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    margin: 15px 0 10px !important;
+    margin: 8px 0 8px !important; /* Reduced vertical margins */
     width: 100% !important;
-    padding: 8px !important;
-    background: rgba(0, 0, 0, 0.2) !important;
-    border-radius: 10px !important;
+    padding: 5px !important; /* Reduced padding */
+    background: rgba(0, 0, 0, 0.4) !important; /* Semi-transparent dark background */
+    border-radius: 5px !important; /* Slightly rounded corners */
 }
 
 .previous-companies span {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important; /* Slightly smaller text */
     color: rgba(255, 255, 255, 1) !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 3px !important; /* Further reduced margin */
     font-weight: 400 !important;
     letter-spacing: 0.7px !important;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.3) !important;
@@ -171,42 +191,32 @@ section {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 30px !important;
-    margin-top: 5px !important;
-    background: rgba(0, 0, 0, 0.4) !important;
-    padding: 10px 20px !important;
-    border-radius: 8px !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    gap: 30px !important; /* Increased horizontal gap for wider logos */
+    margin-top: 2px !important; /* Reduced top margin */
     position: relative !important;
-    overflow: hidden !important;
+    min-width: 240px !important; /* Set minimum width for the container */
+    padding: 0 15px !important; /* Add some horizontal padding */
 }
 
-@keyframes pulseBorder {
-    0% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1) !important;
-    }
-    100% {
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.3) !important;
-    }
-}
+/* Removed pulseBorder animation */
 
 .company-logo {
-    height: 30px !important;
+    height: 26px !important;
     width: auto !important; 
     opacity: 1 !important;
     transition: all 0.3s ease !important;
-    filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.5)) !important; /* Make logos white with glow */
+    filter: brightness(0) invert(1) !important; /* Make logos white without black padding */
     display: block !important;
-    margin: 0 8px !important;
-    max-width: 120px !important; /* Ensure logos don't get too wide */
+    margin: 0 15px !important; /* Increased spacing between logos */
+    min-width: 75px !important; /* Set minimum width for logos */
 }
 
 /* Wells Fargo logo specific styling */
 img[src*="WellsFargo"] {
-    height: 18px !important; /* Further decreased height for better proportions */
-    filter: brightness(0) invert(1) contrast(1.2) !important; /* Enhanced contrast */
-    margin-top: 5px !important; /* Adjusted vertical alignment */
+    height: 20px !important;
+    min-width: 90px !important; /* Set minimum width */
+    filter: brightness(0) invert(1) !important;
+    margin-top: 3px !important;
 }
 
 .company-logo:hover {
@@ -216,49 +226,69 @@ img[src*="WellsFargo"] {
 
 /* Specific styling for company logos */
 .amazon-logo {
-    height: 40px !important;
-    filter: brightness(0) invert(1) contrast(1.2) drop-shadow(0 0 3px rgba(255, 255, 255, 0.8)) !important;
+    height: 32px !important;
+    min-width: 85px !important; /* Set minimum width */
+    filter: brightness(0) invert(1) !important;
 }
 
-
-/* Make bio text smaller */
+/* Bio text styling */
 .bio {
     font-size: 0.95rem !important;
     margin-top: 8px !important;
 }
+
 .microsoft-logo-large {
-    width: 140px !important;
-    height: auto !important;
-    opacity: 1 !important;
-    transition: all 0.3s ease !important;
-    filter: brightness(0) invert(1) drop-shadow(0 0 3px rgba(255, 255, 255, 0.6)) !important;
+    height: 53px !important; /* Significantly increased height */
+    width: auto !important; /* Maintain aspect ratio */
+    margin-left: 14px !important; /* Increased spacing */
+    object-fit: contain !important; /* Prevent distortion */
+    max-width: 100% !important; /* Ensure it doesn't overflow */
+    vertical-align: middle !important; /* Better alignment with text */
 }
 
 .microsoft-logo-large:hover {
-    transform: scale(1.1) !important;
-    filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.8)) !important;
+    filter: brightness(1.2) !important;
+    transform: scale(1.05) !important; /* Subtle hover effect */
 }
 
 /* Enhance role display */
 .role-container {
-    background: rgba(0, 0, 0, 0.3) !important;
-    padding: 15px 25px !important;
-    border-radius: 10px !important;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    margin: 15px auto !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    width: 80% !important;
-    max-width: 500px !important;
+    justify-content: center !important; /* Better centering */
+    margin-bottom: 10px !important; /* Slightly increased margin */
+    padding: 5px 0 !important; /* Add some vertical padding */
+    min-height: 45px !important; /* Increased minimum height for the container */
 }
 
 .role-title {
-    font-weight: 500 !important;
-    letter-spacing: 0.8px !important;
-    font-size: 1.5rem !important;
-    margin: 0 !important;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2) !important;
+    font-size: 1.8rem !important; /* Increased font size */
+    font-weight: 600 !important; /* Made font weight bolder */
+    padding-right: 6px !important; /* Increased padding between text and logo */
+    letter-spacing: 0.2px !important; /* Slightly improved letter spacing */
+}
+
+/* Move previous companies section up */
+.previous-companies {
+    margin-top: -3px !important; /* Move up by creating negative margin */
+}
+/* Additional tweaks for section headings */
+.skills-group h3 {
+    margin-top: 3px !important;
+}
+
+h3 {
+    margin-bottom: 5px !important;
+}
+/* Header adjustments */
+.showcase header {
+    padding-top: 10px !important;
+}
+/* Center content better */
+.text {
+    padding-top: 6vh !important;
+}
+
+.hero-container {
+    margin-top: -2vh !important;
 }

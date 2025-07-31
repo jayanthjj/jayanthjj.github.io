@@ -92,7 +92,8 @@ html, body {
     }
     
     .role-title {
-        font-size: 1.6rem !important;
+        font-size: 2rem !important; /* Increased font size */
+        font-weight: 600 !important; /* Increased font weight */
     }
     
     .previous-companies {
@@ -115,7 +116,7 @@ html, body {
     }
     
     .microsoft-logo-large {
-        height: 20px !important;
+        height: 32px !important; /* Increased height for smaller screens */
     }
 }
 
@@ -171,15 +172,16 @@ section {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 30px !important;
+    gap: 35px !important; /* Increased gap between logos */
     margin-top: 5px !important;
-    background: rgba(0, 0, 0, 0.4) !important;
-    padding: 10px 20px !important;
-    border-radius: 8px !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: transparent !important;
+    padding: 5px 25px !important; /* Increased horizontal padding */
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
     position: relative !important;
-    overflow: hidden !important;
+    overflow: visible !important;
+    min-width: 240px !important; /* Ensure minimum width for the container */
 }
 
 @keyframes pulseBorder {
@@ -196,17 +198,23 @@ section {
     width: auto !important; 
     opacity: 1 !important;
     transition: all 0.3s ease !important;
-    filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.5)) !important; /* Make logos white with glow */
+    filter: brightness(0) invert(1) !important; /* Remove the glow and shadow effects */
     display: block !important;
     margin: 0 8px !important;
-    max-width: 120px !important; /* Ensure logos don't get too wide */
+    max-width: 140px !important; /* Increased max-width for logos */
+    visibility: visible !important; /* Ensure logos are visible */
+    z-index: 10 !important; /* Higher z-index to ensure visibility */
 }
 
 /* Wells Fargo logo specific styling */
-img[src*="WellsFargo"] {
-    height: 18px !important; /* Further decreased height for better proportions */
-    filter: brightness(0) invert(1) contrast(1.2) !important; /* Enhanced contrast */
-    margin-top: 5px !important; /* Adjusted vertical alignment */
+img[src*="WellsFargo"], .wells-fargo-logo {
+    height: 18px !important; /* Height for better visibility */
+    width: auto !important; /* Allow natural width */
+    min-width: 90px !important; /* Set minimum width to ensure proper display */
+    filter: brightness(0) invert(1) !important; /* Simple white color, no extra effects */
+    margin-bottom: 5px !important; /* Adjusted vertical alignment */
+    visibility: visible !important;
+    z-index: 10 !important;
 }
 
 .company-logo:hover {
@@ -216,8 +224,18 @@ img[src*="WellsFargo"] {
 
 /* Specific styling for company logos */
 .amazon-logo {
-    height: 40px !important;
-    filter: brightness(0) invert(1) contrast(1.2) drop-shadow(0 0 3px rgba(255, 255, 255, 0.8)) !important;
+    height: 32px !important;
+    min-width: 85px !important; /* Set minimum width */
+    filter: brightness(0) invert(1) !important; /* Simple white color, no extra effects */
+}
+
+/* Specific styling for Amazon logo */
+img[src*="Amazon"] {
+    height: 28px !important;
+    min-width: 85px !important; /* Set minimum width */
+    filter: brightness(0) invert(1) !important; /* Simple white color, no extra effects */
+    visibility: visible !important;
+    z-index: 10 !important;
 }
 
 
