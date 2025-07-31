@@ -7,26 +7,41 @@
     <meta charset="UTF-8">
     <meta name="description" content="Jayanth's Portfolio">
     <meta name="keywords"
-        content="Jayanth Jayadevan, Resume, Portfolio, jayanth.j737@gmail.com, jayanthjayadevan98@gmail.com, Linkedin Jayanth,LinkedIn Jayanth Jayadevan, Jayanth Machine Learing, NIT Calicut, NITC, Engineer, Flutter, Web dev">
+        content="Jayanth Jayadevan, Resume, Portfolio, jayanth.j737@gmail.com, jayanthjayadevan98@gmail.com, Linkedin Jayanth,LinkedIn Jayanth Jayadevan, Jayanth Machine Learning, NIT Calicut, NITC, Engineer, Flutter, Web dev, Software Engineer, Microsoft">
     <meta name="author" content="Jayanth Jayadevan" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayanth's Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#111">
+    <title>Jayanth Jayadevan - Software Engineer | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
-    <link rel="icon" href="assets/JJ.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="assets/JJ.png" type="image/png" sizes="16x16">
+    
+    <link rel="preload" href="assets/bg.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="assets/micro.png" as="image">
+    <link rel="preload" href="assets/bg.3gp" as="video" type="video/3gp">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="main.js" as="script">
 </head>
 
 <body>
-    <section class="showcase">
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-logo">
+                <span>J</span>
+                <span>J</span>
+            </div>
+            <div class="loader-bar">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="loader-status">Loading amazing stuff...</div>
+        </div>
+    </div>
+        <section class="showcase">
         <header>
-            <h2><a class="logo hvr-ripple-out" href="index.html">JJ</a></h2>
-            <div class="toggle"></div>
+            <h2><a class="logo hvr-ripple-out" href="index.html" aria-label="Jayanth Jayadevan - Home">JJ</a></h2>
         </header>
 
         <video class="flipped-video" autoplay loop muted playsinline>
             <source src="assets/bg.mp4" type="video/mp4">
-            <!-- <img src="assets/bg.gif"> -->
-            <!-- <source src="assets/bg.webp" type="video/webp"> -->
             <source src="assets/bg.3gp" type="video/3gp">
         </video>
         
@@ -34,106 +49,49 @@
         <div class="overlay"></div>
 
         <div class="text">
-            <h2>Hey There<span id="cursor">!</span></h2>
-            <h3>I'm Jayanth Jayadevan</h3>
-            <div class="h3-with-image">
-                <h3>Software Engineer 2 at </h3>
-                <img src="assets/micro.png" alt="Image Description">
+            <div class="hero-container">
+                <div class="intro">
+                    <h1>Hey There<span id="cursor">!</span></h1>
+                    <h2>I'M JAYANTH JAYADEVAN</h2>
+                    <div class="role-container">
+                        <div class="role-title">Software Engineer 2</div>
+                        <img src="assets/micro.png" alt="Microsoft Logo" class="microsoft-logo-large">
+                    </div>
+                    <p class="bio">Specializing in AI-driven developer tools and GenAI systems</p>
+                </div>
+
+                <div class="cta-links">
+                    <a target="_blank" href="https://www.linkedin.com/in/jayanthjj/" class="cta-link">LinkedIn</a>
+                    <a target="_blank" href="https://github.com/jayanthjj/" class="cta-link">GitHub</a>
+                    <a target="_blank" href="mailto:jayanthjayadevan98@gmail.com" class="cta-link">Email</a>
+                </div>
             </div>
-
-            <br>
-            <h4><span class="hvr-bounce-to-right">Looking for Professional Details? Head on to </span> <a target="_blank"
-                    href="https://www.linkedin.com/in/jayanthjj/"><img id="big" src="assets/biglinkedin.png"
-                        height='42px'></a>
-            </h4>
-            <h4><span class="hvr-bounce-to-right">Recruiter? Have a look at my </span> <a target="_blank"
-                    href="https://bit.ly/jayanthjj-resume"><img id="big" src="assets/resume2.png" height='45px'></a>
-            </h4>
-            <h4><span class="hvr-bounce-to-right">Projects and Tech Stacks </span> <a target="_blank"
-                    href="https://github.com/jayanthjj/"><img id="big" src="assets/biggithub.png" height='42px'></a>
-            </h4>
-
         </div>
-        <ul class="social">
-            <li><a target="_blank" href="https://www.linkedin.com/in/jayanthjj/"><img id="lin" src="assets/lin.png" alt="" width='41px'
-                        height='40px'></a></li>
-            <li><a target="_blank" href="https://github.com/jayanthjj/"><img src="assets/git.png" alt="" width='41px' height='40px'></a>
-            </li>
-            <li><a target="_blank" href=""><img id="pho" src="assets/phone.png" alt="" width='41px' height='33px'></a>
-            </li>
-            <li><a target="_blank" href="mailto:jayanthjayadevan98@gmail.com"><img src="assets/email.png" alt="" width='43px'
-                        height='43px'></a>
-            </li>
-            <li><a target="_blank" href="https://twitter.com/jayanthjj7 "><img src="assets/twitter.png" alt="" width='45px'
-                        height='46px'></a>
-            </li>
 
-        </ul>
+
     </section>
-    <div class="menu">
-        <h1 id="JJ" class="hvr-hang">More About me!</hi>
-            <hr>
-            <div class="row-new">
-
-                <div class="column-new">
-                    <a target="_blank" class="hvr-hang" href="http://nitc.ac.in/">Bachelors from National Institute of Technology
-                        Calicut</a>
-                </div>
-
-                <div class="column-new">
-                    <img src="assets/nitc.png" width="110px" height="110px">
-                </div>
-
-            </div>
-            <hr>
-
-            <div class="row-new">
-                <div class="column-new">
-                    <a target="_blank" class="hvr-hang" href="https://www.linkedin.com/company/amazon/">Previously SDE at Amazon</a>
-                </div>
-                <div class="column-new">
-                    <img src="assets/Amazon.png" width="110px" height="45px"> 
-                </div>
-            </div>
-            <hr>
-
-            <div class="row-new-single">
-                <a target="_blank" class="hvr-hang" href="mailto:jayanthjayadevan98@gmail.com">Reach out to me at
-                    jayanthjayadevan98@gmail.com</a>
-            </div>
-
-            <hr>
-
-            <div class="row-new">
-                <div class="column-new1">
-                    <a target="_blank" class="hvr-hang" href="https://www.linkedin.com/in/jayanthjj/">LinkedIn</a>
-                </div>
-                <div class="column-new1">
-                    <a target="_blank" class="hvr-hang" href="https://github.com/jayanthjj/">GitHub</a>
-                </div>
-                <div class="column-new1">
-                    <a target="_blank" class="hvr-hang" href="mailto:jayanthjayadevan98@gmail.com">Gmail</a>
-                </div>
-                <div class="column-new1">
-                    <a target="_blank" class="hvr-hang" href="https://x.com/jayanthjj7">Twitter</a>
-                </div>
-
-            </div>
-            <hr>
-            <a class="credits" href="index.html">© 2024, Jayanth Jayadevan</a>
-
+    <footer class="footer-container">
+        <div class="footer-content">
+            <a class="credits" href="index.html">© 2025, Jayanth Jayadevan</a>
+        </div>
+    </footer>
     </div>
 
     <script>
-        const menuToggle = document.querySelector('.toggle')
-        const showCase = document.querySelector('.showcase')
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active')
-            showCase.classList.toggle('active')
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault()
+                const target = document.querySelector(this.getAttribute('href'))
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }
+            })
         })
-
     </script>
+    
+    <script src="main.js"></script>
 </body>
 
 </html>
