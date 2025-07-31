@@ -101,3 +101,113 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// AI Demo functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const startDemoBtn = document.getElementById('startDemoBtn');
+    const demoInterface = document.getElementById('demoInterface');
+    const chatMessages = document.getElementById('chatMessages');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+    
+    if (startDemoBtn) {
+        startDemoBtn.addEventListener('click', function() {
+            // Show the chat interface
+            demoInterface.style.display = 'block';
+            startDemoBtn.style.display = 'none';
+            
+            // Enable input elements
+            userInput.disabled = false;
+            sendBtn.disabled = false;
+            
+            // Add welcome message
+            addMessage("Hi there! I'm Jayanth's AI assistant. Ask me anything about his AI skills, projects, or experience!", 'ai');
+            
+            // Focus input
+            userInput.focus();
+        });
+    }
+    
+    // Send message functionality
+    if (sendBtn) {
+        sendBtn.addEventListener('click', sendMessage);
+    }
+    
+    if (userInput) {
+        userInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    }
+    
+    function sendMessage() {
+        const message = userInput.value.trim();
+        if (message === '') return;
+        
+        // Add user message
+        addMessage(message, 'user');
+        
+        // Clear input
+        userInput.value = '';
+        
+        // Disable input while "processing"
+        userInput.disabled = true;
+        sendBtn.disabled = true;
+        
+        // Simulate typing indicator
+        const typingIndicator = document.createElement('div');
+        typingIndicator.className = 'message ai-message typing-indicator';
+        typingIndicator.textContent = '...';
+        chatMessages.appendChild(typingIndicator);
+        
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        // Simulate AI response after delay
+        setTimeout(() => {
+            // Remove typing indicator
+            chatMessages.removeChild(typingIndicator);
+            
+            // Process response
+            const response = getAIResponse(message);
+            addMessage(response, 'ai');
+            
+            // Re-enable input
+            userInput.disabled = false;
+            sendBtn.disabled = false;
+            userInput.focus();
+        }, 1500);
+    }
+    
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender}-message`;
+        messageDiv.textContent = text;
+        chatMessages.appendChild(messageDiv);
+        
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    function getAIResponse(message) {
+        message = message.toLowerCase();
+        
+        // Simple response logic
+        if (message.includes('project') || message.includes('work')) {
+            return "Jayanth has worked on several innovative AI projects including developer assistants powered by LLMs, agent-based systems for automated workflows, and GenAI content platforms. His most recent work involves building AI systems that help developers write better code and understand complex codebases.";
+        }
+        else if (message.includes('skill') || message.includes('expertise')) {
+            return "Jayanth specializes in AI and ML technologies including LLM fine-tuning, RAG systems, agent frameworks, and prompt engineering. He's also proficient in Python, React, and cloud architecture for scalable AI applications.";
+        }
+        else if (message.includes('experience') || message.includes('background')) {
+            return "Jayanth is currently a Software Engineer 2 at Microsoft, where he works on AI-driven developer tools. His background includes expertise in developing GenAI applications and designing multi-agent systems that solve complex problems.";
+        }
+        else if (message.includes('contact') || message.includes('hire') || message.includes('email')) {
+            return "You can contact Jayanth via email at jayanthjayadevan98@gmail.com or connect with him on LinkedIn. He's currently open to discussing exciting opportunities in AI development and engineering leadership roles.";
+        }
+        else {
+            return "Thanks for your interest! Jayanth is passionate about creating AI systems that are both powerful and user-friendly. Is there something specific about his AI work or software development experience you'd like to know?";
+        }
+    }
+});
