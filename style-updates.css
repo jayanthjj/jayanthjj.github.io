@@ -21,7 +21,7 @@ html, body {
 /* Adjust intro section padding */
 .intro {
     padding: 1.5rem !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: .5rem !important;
     max-width: 700px !important;
 }
 
@@ -241,6 +241,6 @@ img[src*="Amazon"] {
 
 /* Make bio text smaller */
 .bio {
-    font-size: 0.95rem !important;
+    font-size: 1.11rem !important;
     margin-top: 8px !important;
 }
